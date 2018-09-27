@@ -98,7 +98,11 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
       if (mo.isa(MML.mo)) mo.movablelimits = false;
       this.Push(
         MML.TeXAtom(
-          MML.munderover(expression, null, mml).With({ accent: true })
+          MML.munderover(
+            expression,
+            null,
+            MML.mpadded(mml).With({ height: 0 })
+          ).With({ accent: true })
         )
       );
     }
