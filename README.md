@@ -1,7 +1,7 @@
-# mathjax-ams-html
+# mathjax-ams-macros
 
 MathJax extension to provide MathJax macros for AMS production.
 
-## MathJax Extension: `ams-html.js`
+## MathJax Extension: `ams-macros.js`
 
 Simply add this extension to the MathJax configuration.
