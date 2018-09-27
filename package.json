@@ -1,0 +1,26 @@
+{
+  "name": "mathjax-ams-macros",
+  "main": "./ams-macros.js",
+  "version": "1.0.0",
+  "description": "A mathjax extension for AMS production",
+  "keywords": [
+    "MathJax",
+    "TeX",
+    "AmerMathSoc"
+  ],
+  "license": "Apache-2.0",
+  "contributors": [
+    "Peter Krautzberger (https://github.com/pkra)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AmerMathSoc/mathjax-ams-macros"
+  },
+  "homepage": "https://github.com/AmerMathSoc/mathjax-ams-macros/",
+  "bugs": {
+    "url": "https://github.com/AmerMathSoc/mathjax-ams-macros/issues"
+  },
+  "scripts": {
+    "test": "echo 'No tests yet'"
+  }
+}
