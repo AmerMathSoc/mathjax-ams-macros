@@ -57,7 +57,7 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
         // mcl 01
         overarc: ['Accent', '2312', 1],
         // jams878
-        bm: 'boldsymbolSwitch',
+        bm: ['Macro', '\\boldsymbol{#1}', 1],
         // jams906
         widecheck: ['Accent', '02C7', 1],
         // mcom3229, from accents package
@@ -82,9 +82,6 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
     true
   );
   TEX.Parse.Augment({
-    boldsymbolSwitch: function(name) {
-      this.stack.env.boldsymbol = true;
-    },
     accentset: function(name) {
       const accent = this.ParseArg(name);
       const expression = this.ParseArg(name);
