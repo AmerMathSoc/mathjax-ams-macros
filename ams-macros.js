@@ -61,7 +61,9 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
         // jams906
         widecheck: ['Accent', '02C7', 1],
         // mcom3229, from accents package
-        accentset: 'accentset'
+        accentset: 'accentset',
+        // jams 913 NOTE stix.sty
+        intbar: ['Macro', '\\mmlToken{mo}{\u2a0d}'],
       },
       delimiter: {
         // mcom1149
