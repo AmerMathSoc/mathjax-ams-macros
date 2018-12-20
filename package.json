@@ -1,7 +1,7 @@
 {
   "name": "mathjax-ams-macros",
   "main": "./ams-macros.js",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "A mathjax extension for AMS production",
   "keywords": [
     "MathJax",
