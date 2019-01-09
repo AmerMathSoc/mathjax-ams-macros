@@ -77,7 +77,10 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
         // mcom3334
         // NOTE this does not match mathtools properly (column alignment is optional)
         // TODO #309 should remove this hack
-        'bmatrix*': ['Array', null, '[', ']', 'c']
+        'bmatrix*': ['Array', null, '[', ']', 'c'],
+        // jams915
+        // NOTE from mathtools
+        'dcases': ['Array',null,'\\{','.','ll',null,'.2em','D']
       }
     },
     null,
