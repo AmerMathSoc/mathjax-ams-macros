@@ -64,6 +64,9 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
         accentset: 'accentset',
         // jams 913 NOTE stix.sty
         intbar: ['Macro', '\\mmlToken{mo}{\u2a0d}'],
+        // mcom 3375
+        bfit: ['SetFont',MML.VARIANT.BOLDITALIC],
+        mathbfit: ['Macro','{\\bfit #1}',1]
       },
       delimiter: {
         // mcom1149
