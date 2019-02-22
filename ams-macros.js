@@ -83,7 +83,9 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
         'bmatrix*': ['Array', null, '[', ']', 'c'],
         // jams915
         // NOTE from mathtools
-        'dcases': ['Array',null,'\\{','.','ll',null,'.2em','D']
+        'dcases': ['Array',null,'\\{','.','ll',null,'.2em','D'],
+        // NOTE from mathtools
+        'bsmallmatrix': ['Array',null,'[',']','c','0.333em','.2em','S',1]
       }
     },
     null,
