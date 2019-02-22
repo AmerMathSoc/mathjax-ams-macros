@@ -65,8 +65,10 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
         // jams 913 NOTE stix.sty
         intbar: ['Macro', '\\mmlToken{mo}{\u2a0d}'],
         // mcom 3375
-        bfit: ['SetFont',MML.VARIANT.BOLDITALIC],
-        mathbfit: ['Macro','{\\bfit #1}',1]
+        bfit: ['SetFont', MML.VARIANT.BOLDITALIC],
+        mathbfit: ['Macro', '{\\bfit #1}', 1],
+        // mcom 3374
+        mathsc: 'smallcaps'
       },
       delimiter: {
         // mcom1149
@@ -83,9 +85,9 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
         'bmatrix*': ['Array', null, '[', ']', 'c'],
         // jams915
         // NOTE from mathtools
-        'dcases': ['Array',null,'\\{','.','ll',null,'.2em','D'],
+        dcases: ['Array', null, '\\{', '.', 'll', null, '.2em', 'D'],
         // NOTE from mathtools
-        'bsmallmatrix': ['Array',null,'[',']','c','0.333em','.2em','S',1]
+        bsmallmatrix: ['Array', null, '[', ']', 'c', '0.333em', '.2em', 'S', 1]
       }
     },
     null,
@@ -112,6 +114,16 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
           ).With({ accent: true })
         )
       );
+    },
+    smallcaps: function(name) {
+      let argument = this.GetArgument(name);
+      const def = { mathsize: '1em', mathvariant: MML.VARIANT.NORMAL };
+      for (let char of argument) {
+        if (char.toLowerCase() === char) {
+          def.mathsize = '0.8em';
+        } else def.mathsize = '1em';
+        this.Push(this.mmlToken(MML.mi(char.toUpperCase()).With(def)));
+      }
     }
   });
 });
