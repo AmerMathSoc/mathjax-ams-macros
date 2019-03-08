@@ -68,7 +68,9 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
         bfit: ['SetFont', MML.VARIANT.BOLDITALIC],
         mathbfit: ['Macro', '{\\bfit #1}', 1],
         // mcom 3374
-        mathsc: 'smallcaps'
+        mathsc: 'smallcaps',
+        // mcom 3365
+        mathbfcal: ['Macro', '\\boldsymbol{\\mathcal{#1}}', 1]
       },
       delimiter: {
         // mcom1149
