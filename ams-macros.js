@@ -36,7 +36,7 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
         // btran18
         llbracket: ['Macro', '\\mathopen{\u27E6}'],
         rrbracket: ['Macro', '\\mathclose{\u27E7}'],
-        // TODO no current document uses this
+        // mcom 3381
         lefteqn: ['Macro', '\\rlap{\\displaystyle{#1}}', 1],
         // jams887
         sslash: ['Macro', '\u2AFD'],
@@ -89,7 +89,10 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
         // NOTE from mathtools
         dcases: ['Array', null, '\\{', '.', 'll', null, '.2em', 'D'],
         // NOTE from mathtools
-        bsmallmatrix: ['Array', null, '[', ']', 'c', '0.333em', '.2em', 'S', 1]
+        bsmallmatrix: ['Array', null, '[', ']', 'c', '0.333em', '.2em', 'S', 1],
+        // mcom3398
+        // NOTE from mathtools
+        multlined: ['Array', null, '[', ']', 'c', '0.333em', '.2em', 'S', 1]
       }
     },
     null,
