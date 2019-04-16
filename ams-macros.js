@@ -77,10 +77,6 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
         '\\Vvert': '\u2980'
       },
       environment: {
-        // mcom 3325
-        // same as alignat/alignat*
-        xxalignat: ['AlignAt', null, true, true],
-        'xxalignat*': ['AlignAt', null, false, true],
         // mcom3334
         // NOTE this does not match mathtools properly (column alignment is optional)
         // TODO #309 should remove this hack
