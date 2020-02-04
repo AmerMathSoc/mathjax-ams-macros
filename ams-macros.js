@@ -15,7 +15,7 @@
  */
 
 MathJax.Extension['ams-macros'] = {
-  version: '1.0.0'
+  version: '2.1.0'
 };
 
 MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
@@ -70,7 +70,9 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
         // mcom 3374
         mathsc: 'smallcaps',
         // mcom 3365
-        mathbfcal: ['Macro', '\\boldsymbol{\\mathcal{#1}}', 1]
+        mathbfcal: ['Macro', '\\boldsymbol{\\mathcal{#1}}', 1],
+        // mcom 3507
+        sfrac: 'bevelledFraction' // NOTE does not support optional arguments from xfrac package
       },
       delimiter: {
         // mcom1149
@@ -125,6 +127,11 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
         } else def.mathsize = '1em';
         this.Push(this.mmlToken(MML.mi(char.toUpperCase()).With(def)));
       }
+    },
+    bevelledFraction: function (name) {
+      var num = this.ParseArg(name),
+          den = this.ParseArg(name);
+      this.Push(MML.mfrac(num,den).With({bevelled: true}));
     }
   });
 });
