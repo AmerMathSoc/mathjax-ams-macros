@@ -15,7 +15,7 @@
  */
 
 MathJax.Extension['ams-macros'] = {
-  version: '2.1.0'
+  version: '2.2.0'
 };
 
 MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
@@ -76,7 +76,10 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
       },
       delimiter: {
         // mcom1149
-        '\\Vvert': '\u2980'
+        '\\Vvert': '\u2980',
+        // mcom 3545
+        '\\llbracket': '\u27E6',
+        '\\rrbracket': '\u27E7',
       },
       environment: {
         // mcom3334
