@@ -20,7 +20,11 @@
   "bugs": {
     "url": "https://github.com/AmerMathSoc/mathjax-ams-macros/issues"
   },
+  "devDependencies": {
+    "standard-version": "^9.0.0"
+  },
   "scripts": {
+    "release": "standard-version",
     "test": "echo 'No tests yet'"
   }
 }
