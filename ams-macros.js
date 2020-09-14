@@ -1,5 +1,5 @@
 /*************************************************************
- *  Copyright (c) 2018 Peter Krautzberger
+ *  Copyright (c) 2020 Peter Krautzberger
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -14,133 +14,137 @@
  *  limitations under the License.
  */
 
-MathJax.Extension['ams-macros'] = {
-  version: '2.2.0'
-};
+const NodeUtil = require('mathjax/js/input/tex/NodeUtil.js').default;
+const Configuration = require('mathjax/js/input/tex/Configuration.js');
+const SymbolMap = require('mathjax/js/input/tex/SymbolMap.js');
+const TexConstants = require('mathjax/js/input/tex/TexConstants.js');
+const ParseMethods = require('mathjax/js/input/tex/ParseMethods.js');
+const BaseMethods = require('mathjax/js/input/tex/base/BaseMethods.js');
 
-MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
-  var MML = MathJax.ElementJax.mml,
-    TEX = MathJax.InputJax.TeX;
-
-  TEX.Definitions.Add(
-    {
-      macros: {
-        // AmerMathSoc/ams-doc-sources#879
-        pmod: [
-          'Macro',
-          '\\mathchoice{\\mkern18mu}{\\mkern12mu}{\\mkern12mu}{\\mkern12mu}(\\operatorname{mod}\\mkern6mu #1)',
-          1
-        ],
-        // btran 8
-        bigsqcap: ['Macro', '\\mmlToken{mo}{\u2a05}'],
-        // btran18
-        llbracket: ['Macro', '\\mathopen{\u27E6}'],
-        rrbracket: ['Macro', '\\mathclose{\u27E7}'],
-        // mcom 3381
-        lefteqn: ['Macro', '\\rlap{\\displaystyle{#1}}', 1],
-        // jams887
-        sslash: ['Macro', '\u2AFD'],
-        // Cf. #136
-        square: ['Macro', '◻'],
-        // Cf. #136
-        Box: ['Macro', '◻'],
-        // jams889
-        mathds: ['Macro', '\\mathbb{#1}', 1],
-        // jams898
-        blacktriangle: ['Macro', '▴'],
-        // mcom 1463
-        coloneq: ['Macro', '\\mathrel{≔}'],
-        // btran27, mathtools
-        coloneqq: ['Macro', '\\mathrel{≔}'],
-        // mcl08
-        adots: ['Macro', '⋰'],
-        // mcl 01
-        overarc: ['Accent', '2312', 1],
-        // jams878
-        bm: ['Macro', '\\boldsymbol{#1}', 1],
-        // jams906
-        widecheck: ['Accent', '02C7', 1],
-        // mcom3229, from accents package
-        accentset: 'accentset',
-        // jams 913 NOTE stix.sty
-        intbar: ['Macro', '\\mmlToken{mo}{\u2a0d}'],
-        // mcom 3375
-        bfit: ['SetFont', MML.VARIANT.BOLDITALIC],
-        mathbfit: ['Macro', '{\\bfit #1}', 1],
-        // mcom 3374
-        mathsc: 'smallcaps',
-        // mcom 3365
-        mathbfcal: ['Macro', '\\boldsymbol{\\mathcal{#1}}', 1],
-        // mcom 3507
-        sfrac: 'bevelledFraction' // NOTE does not support optional arguments from xfrac package
-      },
-      delimiter: {
-        // mcom1149
-        '\\Vvert': '\u2980',
-        // mcom 3545
-        '\\llbracket': '\u27E6',
-        '\\rrbracket': '\u27E7',
-      },
-      environment: {
-        // mcom3334
-        // NOTE this does not match mathtools properly (column alignment is optional)
-        // TODO #309 should remove this hack
-        'bmatrix*': ['Array', null, '[', ']', 'c'],
-        // jams915
-        // NOTE from mathtools
-        dcases: ['Array', null, '\\{', '.', 'll', null, '.2em', 'D'],
-        // NOTE from mathtools
-        bsmallmatrix: ['Array', null, '[', ']', 'c', '0.333em', '.2em', 'S', 1],
-        // mcom3398
-        // NOTE from mathtools
-        multlined: ['Array', null, '[', ']', 'c', '0.333em', '.2em', 'S', 1]
+new SymbolMap.CommandMap(
+  'ams-macros-macros',
+  {
+    // AmerMathSoc/ams-doc-sources#879
+    pmod: [
+      'Macro',
+      '\\mathchoice{\\mkern18mu}{\\mkern12mu}{\\mkern12mu}{\\mkern12mu}(\\operatorname{mod}\\mkern6mu #1)',
+      1,
+    ],
+    // btran 8
+    bigsqcap: ['Macro', '\\mmlToken{mo}{\u2a05}'],
+    // btran18
+    llbracket: ['Macro', '\\mathopen{\u27E6}'],
+    rrbracket: ['Macro', '\\mathclose{\u27E7}'],
+    // mcom 3381
+    lefteqn: ['Macro', '\\rlap{\\displaystyle{#1}}', 1],
+    // jams887
+    sslash: ['Macro', '\u2AFD'],
+    // Cf. #136
+    square: ['Macro', '◻'],
+    // Cf. #136
+    Box: ['Macro', '◻'],
+    // jams889
+    mathds: ['Macro', '\\mathbb{#1}', 1],
+    // jams898
+    blacktriangle: ['Macro', '▴'],
+    // mcom 1463
+    coloneq: ['Macro', '\\mathrel{≔}'],
+    // btran27, mathtools
+    coloneqq: ['Macro', '\\mathrel{≔}'],
+    // mcl08
+    adots: ['Macro', '⋰'],
+    // mcl 01
+    overarc: ['Accent', '2312', 1],
+    // jams878
+    // bm: ['Macro', '\\boldsymbol{#1}', 1], // TODO cf. #15
+    // jams906
+    widecheck: ['Accent', '02C7', 1],
+    // mcom3329, from accents package
+    accentset: 'accentset',
+    // jams 913 NOTE stix.sty
+    intbar: ['Macro', '\\mmlToken{mo}{\u2a0d}'],
+    // mcom 3375
+    bfit: ['SetFont', TexConstants.TexConstant.Variant.BOLDITALIC],
+    mathbfit: ['Macro', '{\\bfit #1}', 1],
+    // mcom 3374
+    mathsc: 'smallcaps',
+    // mcom 3365
+    mathbfcal: ['Macro', '\\boldsymbol{\\mathcal{#1}}', 1],
+    // mcom 3507
+    sfrac: 'bevelledFraction', // NOTE does not support optional arguments from xfrac package
+  },
+  {
+    accentset: function (parser, name) {
+      const accent = parser.ParseArg(name);
+      const expression = parser.ParseArg(name);
+      NodeUtil.setAttribute(accent, 'accent', true);
+      NodeUtil.setAttribute(accent, 'mathsize', 'small');
+      if (parser.stack.env.font) {
+        NodeUtil.setAttribute(accent, 'mathvariant', parser.stack.env.font);
       }
+      const mpadded = parser.create('node', 'mpadded', [accent], { height: 0 });
+      const mover = parser.create('node', 'mover', [expression, mpadded]);
+      const texatom = parser.create('node', 'TeXAtom', [mover]);
+      parser.Push(texatom);
     },
-    null,
-    true
-  );
-  TEX.Parse.Augment({
-    accentset: function(name) {
-      const accent = this.ParseArg(name);
-      const expression = this.ParseArg(name);
-      const def = { accent: true, mathsize: 'small' };
-      if (this.stack.env.font) {
-        def.mathvariant = this.stack.env.font;
-      }
-      const mml = this.mmlToken(accent.With(def));
-      mml.stretchy = false;
-      const mo = expression.isEmbellished() ? expression.CoreMO() : expression;
-      if (mo.isa(MML.mo)) mo.movablelimits = false;
-      this.Push(
-        MML.TeXAtom(
-          MML.munderover(
-            expression,
-            null,
-            MML.mpadded(mml).With({ height: 0 })
-          ).With({ accent: true })
-        )
-      );
-    },
-    smallcaps: function(name) {
-      let argument = this.GetArgument(name);
-      const def = { mathsize: '1em', mathvariant: MML.VARIANT.NORMAL };
+    smallcaps: function (parser, name) {
+      let argument = parser.GetArgument(name);
+      const def = {
+        mathsize: '1em',
+        mathvariant: 'normal', // TODO why does TexConstants.TexConstant.VARIANT.NORMAL throw?
+      };
       for (let char of argument) {
         if (char.toLowerCase() === char) {
           def.mathsize = '0.8em';
         } else def.mathsize = '1em';
-        this.Push(this.mmlToken(MML.mi(char.toUpperCase()).With(def)));
+        parser.Push(parser.create('token', 'mi', def, char.toUpperCase()));
       }
     },
-    bevelledFraction: function (name) {
-      var num = this.ParseArg(name),
-          den = this.ParseArg(name);
-      this.Push(MML.mfrac(num,den).With({bevelled: true}));
-    }
-  });
+    bevelledFraction: function (parser, name) {
+      const num = parser.ParseArg(name);
+      const den = parser.ParseArg(name);
+      const frac = parser.create('node', 'mfrac', [num, den], {
+        bevelled: true,
+      });
+      parser.Push(frac);
+    },
+  }
+);
+
+new SymbolMap.DelimiterMap('ams-macros-delimiters', ParseMethods.delimiter, {
+  // mcom1149
+  '\\Vvert': '\u2980',
+  // mcom 3545
+  '\\llbracket': '\u27E6',
+  '\\rrbracket': '\u27E7',
 });
 
-MathJax.Callback.Queue([
-  'loadComplete',
-  MathJax.Ajax,
-  '[ams-macros]/ams-macros.js'
-]);
+new SymbolMap.EnvironmentMap(
+  'ams-macros-environments',
+  ParseMethods.environment,
+  {
+    // mcom3334
+    // NOTE this does not match mathtools properly (column alignment is optional)
+    // TODO #309 should remove this hack
+    // 'bmatrix*': ['Array', null, '[', ']', 'c'], // TODO mathtools now exists
+    // jams915
+    // NOTE from mathtools
+    dcases: ['Array', null, '\\{', '.', 'll', null, '.2em', 'D'],
+    // NOTE from mathtools
+    bsmallmatrix: ['Array', null, '[', ']', 'c', '0.333em', '.2em', 'S', 1],
+    // mcom3398
+    // NOTE from mathtools
+    multlined: ['Array', null, '[', ']', 'c', '0.333em', '.2em', 'S', 1],
+  },
+  {
+    Array: BaseMethods.Array,
+  }
+);
+
+exports.HtmlConfiguration = Configuration.Configuration.create('ams-macros', {
+  handler: {
+    delimiter: ['ams-macros-delimiters'],
+    macro: ['ams-macros-macros'],
+    environments: ['ams-macros-environments'],
+  },
+});
