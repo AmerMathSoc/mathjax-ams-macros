@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v3.0.0-0...v3.0.0) (2020-10-06)
+
+
+### Bug Fixes
+
+* change export ([218a00f](https://github.com/AmerMathSoc/mathjax-ams-macros/commit/218a00fc0cedb9508bc94fec66ea0392ea23c5af)), closes [#25](https://github.com/AmerMathSoc/mathjax-ams-macros/issues/25)
+* change import ([f355e42](https://github.com/AmerMathSoc/mathjax-ams-macros/commit/f355e42c34b9c6612f4887458eb4273dc4f9c19a)), closes [#26](https://github.com/AmerMathSoc/mathjax-ams-macros/issues/26)
+
 ## 3.0.0-0 (2020-09-14)
 
 
