@@ -14,12 +14,12 @@
  *  limitations under the License.
  */
 
-const NodeUtil = require('mathjax/js/input/tex/NodeUtil.js').default;
-const Configuration = require('mathjax/js/input/tex/Configuration.js');
-const SymbolMap = require('mathjax/js/input/tex/SymbolMap.js');
-const TexConstants = require('mathjax/js/input/tex/TexConstants.js');
-const ParseMethods = require('mathjax/js/input/tex/ParseMethods.js');
-const BaseMethods = require('mathjax/js/input/tex/base/BaseMethods.js');
+const NodeUtil = require('mathjax-full/js/input/tex/NodeUtil.js').default;
+const Configuration = require('mathjax-full/js/input/tex/Configuration.js');
+const SymbolMap = require('mathjax-full/js/input/tex/SymbolMap.js');
+const TexConstants = require('mathjax-full/js/input/tex/TexConstants.js');
+const ParseMethods = require('mathjax-full/js/input/tex/ParseMethods.js');
+const BaseMethods = require('mathjax-full/js/input/tex/base/BaseMethods.js');
 
 new SymbolMap.CommandMap(
   'ams-macros-macros',
@@ -50,7 +50,7 @@ new SymbolMap.CommandMap(
     // mcom 1463
     coloneq: ['Macro', '\\mathrel{≔}'],
     // btran27, mathtools
-    coloneqq: ['Macro', '\\mathrel{≔}'],
+    // coloneqq: ['Macro', '\\mathrel{≔}'],
     // mcl08
     adots: ['Macro', '⋰'],
     // mcl 01
