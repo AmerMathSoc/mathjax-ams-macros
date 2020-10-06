@@ -141,7 +141,7 @@ new SymbolMap.EnvironmentMap(
   }
 );
 
-exports.HtmlConfiguration = Configuration.Configuration.create('ams-macros', {
+exports.configuration = Configuration.Configuration.create('ams-macros', {
   handler: {
     delimiter: ['ams-macros-delimiters'],
     macro: ['ams-macros-macros'],
