@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v3.0.0...v3.1.0) (2020-10-13)
+
+
+### Features
+
+* add typescript implementaton ([2f392ce](https://github.com/AmerMathSoc/mathjax-ams-macros/commit/2f392ce8d97676515ccdd340afd767146272b1f8))
+
+
+### Bug Fixes
+
+* import missing BaseMethods ([a475960](https://github.com/AmerMathSoc/mathjax-ams-macros/commit/a4759604eb782b94ecef13d945d8a85225cc7830))
+
 ## [3.0.0](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v3.0.0-0...v3.0.0) (2020-10-06)
 
 
