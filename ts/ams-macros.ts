@@ -62,6 +62,9 @@ AmsMacrosMethods.bevelledFraction = function (parser: TexParser, name: string) {
     parser.Push(frac);
 };
 
+AmsMacrosMethods.Macro = BaseMethods.Macro;
+AmsMacrosMethods.Accent = BaseMethods.Accent;
+AmsMacrosMethods.SetFont = BaseMethods.SetFont;
 
 new CommandMap(
     'ams-macros-macros',
