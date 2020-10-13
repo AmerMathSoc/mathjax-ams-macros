@@ -66,6 +66,9 @@ AmsMacrosMethods.bevelledFraction = function (parser, name) {
     });
     parser.Push(frac);
 };
+AmsMacrosMethods.Macro = BaseMethods_js_1.default.Macro;
+AmsMacrosMethods.Accent = BaseMethods_js_1.default.Accent;
+AmsMacrosMethods.SetFont = BaseMethods_js_1.default.SetFont;
 new SymbolMap_js_1.CommandMap('ams-macros-macros', {
     pmod: [
         'Macro',
