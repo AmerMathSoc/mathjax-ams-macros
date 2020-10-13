@@ -21,7 +21,9 @@
     "url": "https://github.com/AmerMathSoc/mathjax-ams-macros/issues"
   },
   "devDependencies": {
-    "standard-version": "^9.0.0"
+    "mathjax-full": "^3.1.2",
+    "standard-version": "^9.0.0",
+    "typescript": "^3.9.7"
   },
   "scripts": {
     "release": "standard-version",
