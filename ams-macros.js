@@ -80,6 +80,9 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
         // mcom 3545
         '\\llbracket': '\u27E6',
         '\\rrbracket': '\u27E7',
+        // mcom 3567
+        '\\llangle': '\u2989',
+        '\\rrangle': '\u298A',
       },
       environment: {
         // mcom3334
