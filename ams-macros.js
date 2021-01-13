@@ -83,6 +83,9 @@ MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
         // mcom 3567
         '\\llangle': '\u2989',
         '\\rrangle': '\u298A',
+        // btran 54
+        '\\lAngle': '\u27EA',
+        '\\rAngle': '\u27EB',
       },
       environment: {
         // mcom3334
