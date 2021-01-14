@@ -100,8 +100,6 @@ new CommandMap(
         adots: ['Macro', '⋰'],
         // mcl 01
         overarc: ['Accent', '2312', 1],
-        // jams878
-        // bm: ['Macro', '\\boldsymbol{#1}', 1], // TODO cf. #15
         // jams906
         widecheck: ['Accent', '02C7', 1],
         // mcom3329, from accents package
