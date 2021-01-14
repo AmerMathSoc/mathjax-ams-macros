@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v3.1.0...v3.2.0) (2021-01-14)
+
+
+### Features
+
+* add llangle, rrangle, lAngle, rAngle ([7e575d4](https://github.com/AmerMathSoc/mathjax-ams-macros/commit/7e575d4976ac6d28c8b74f382e8a25fc9f32d5c1)), closes [#31](https://github.com/AmerMathSoc/mathjax-ams-macros/issues/31)
+
 ## [3.1.0](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v3.0.0...v3.1.0) (2020-10-13)
 
 
