@@ -76,8 +76,6 @@ new SymbolMap_js_1.CommandMap('ams-macros-macros', {
         1,
     ],
     bigsqcap: ['Macro', '\\mmlToken{mo}{\u2a05}'],
-    llbracket: ['Macro', '\\mathopen{\u27E6}'],
-    rrbracket: ['Macro', '\\mathclose{\u27E7}'],
     lefteqn: ['Macro', '\\rlap{\\displaystyle{#1}}', 1],
     sslash: ['Macro', '\u2AFD'],
     square: ['Macro', '◻'],
@@ -100,6 +98,10 @@ new SymbolMap_js_1.DelimiterMap('ams-macros-delimiters', ParseMethods_js_1.defau
     '\\Vvert': '\u2980',
     '\\llbracket': '\u27E6',
     '\\rrbracket': '\u27E7',
+    '\\llangle': '\u2989',
+    '\\rrangle': '\u298A',
+    '\\lAngle': '\u27EA',
+    '\\rAngle': '\u27EB',
 });
 new SymbolMap_js_1.EnvironmentMap('ams-macros-environments', ParseMethods_js_1.default.environment, {
     dcases: ['Array', null, '\\{', '.', 'll', null, '.2em', 'D'],
@@ -111,7 +113,7 @@ new SymbolMap_js_1.EnvironmentMap('ams-macros-environments', ParseMethods_js_1.d
 exports.configuration = Configuration_js_1.Configuration.create('ams-macros', {
     handler: {
         delimiter: ['ams-macros-delimiters'],
-        macro: ['ams-macros-macros'],
+        macro: ['ams-macros-macros', 'ams-macros-delimiters'],
         environment: ['ams-macros-environments'],
     },
 });
