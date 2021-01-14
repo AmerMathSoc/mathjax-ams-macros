@@ -77,9 +77,6 @@ new CommandMap(
         ],
         // btran 8
         bigsqcap: ['Macro', '\\mmlToken{mo}{\u2a05}'],
-        // btran18
-        llbracket: ['Macro', '\\mathopen{\u27E6}'],
-        rrbracket: ['Macro', '\\mathclose{\u27E7}'],
         // mcom 3381
         lefteqn: ['Macro', '\\rlap{\\displaystyle{#1}}', 1],
         // jams887
@@ -122,7 +119,7 @@ new CommandMap(
 new DelimiterMap('ams-macros-delimiters', ParseMethods.delimiter, {
     // mcom1149
     '\\Vvert': '\u2980',
-    // mcom 3545
+    // mcom 3545 (originally macro for btran18)
     '\\llbracket': '\u27E6',
     '\\rrbracket': '\u27E7',
 });
@@ -152,7 +149,7 @@ new EnvironmentMap(
 export const configuration = Configuration.create('ams-macros', {
     handler: {
         delimiter: ['ams-macros-delimiters'],
-        macro: ['ams-macros-macros'],
+        macro: ['ams-macros-macros', 'ams-macros-delimiters'],
         environment: ['ams-macros-environments'],
     },
 });
