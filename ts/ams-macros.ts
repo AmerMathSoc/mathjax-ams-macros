@@ -122,6 +122,12 @@ new DelimiterMap('ams-macros-delimiters', ParseMethods.delimiter, {
     // mcom 3545 (originally macro for btran18)
     '\\llbracket': '\u27E6',
     '\\rrbracket': '\u27E7',
+    // mcom 3567
+    '\\llangle': '\u2989',
+    '\\rrangle': '\u298A',
+    // btran 54
+    '\\lAngle': '\u27EA',
+    '\\rAngle': '\u27EB',
 });
 
 new EnvironmentMap(
