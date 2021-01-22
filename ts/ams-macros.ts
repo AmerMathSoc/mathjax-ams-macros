@@ -16,7 +16,7 @@
 
 import NodeUtil from 'mathjax-full/js/input/tex/NodeUtil.js';
 import { Configuration } from 'mathjax-full/js/input/tex/Configuration.js';
-import { CommandMap, EnvironmentMap, DelimiterMap } from 'mathjax-full/js/input/tex/SymbolMap.js';
+import { CommandMap, DelimiterMap } from 'mathjax-full/js/input/tex/SymbolMap.js';
 import { ParseMethod } from 'mathjax-full/js/input/tex/Types.js';
 import { TexConstant } from 'mathjax-full/js/input/tex/TexConstants.js';
 import ParseMethods from 'mathjax-full/js/input/tex/ParseMethods.js';
@@ -91,8 +91,6 @@ new CommandMap(
         blacktriangle: ['Macro', '▴'],
         // mcom 1463
         coloneq: ['Macro', '\\mathrel{≔}'],
-        // btran27, mathtools
-        // coloneqq: ['Macro', '\\mathrel{≔}'],
         // mcl08
         adots: ['Macro', '⋰'],
         // mcl 01
@@ -130,32 +128,9 @@ new DelimiterMap('ams-macros-delimiters', ParseMethods.delimiter, {
     '\\rAngle': '\u27EB',
 });
 
-new EnvironmentMap(
-    'ams-macros-environments',
-    ParseMethods.environment,
-    {
-        // mcom3334
-        // NOTE this does not match mathtools properly (column alignment is optional)
-        // TODO #309 should remove this hack
-        // 'bmatrix*': ['Array', null, '[', ']', 'c'], // TODO mathtools now exists
-        // jams915
-        // NOTE from mathtools
-        dcases: ['Array', null, '\\{', '.', 'll', null, '.2em', 'D'],
-        // NOTE from mathtools
-        bsmallmatrix: ['Array', null, '[', ']', 'c', '0.333em', '.2em', 'S', 1],
-        // mcom3398
-        // NOTE from mathtools
-        multlined: ['Array', null, '[', ']', 'c', '0.333em', '.2em', 'S', 1],
-    },
-    {
-        Array: BaseMethods.Array,
-    }
-);
-
 export const configuration = Configuration.create('ams-macros', {
     handler: {
         delimiter: ['ams-macros-delimiters'],
         macro: ['ams-macros-macros', 'ams-macros-delimiters'],
-        environment: ['ams-macros-environments'],
     },
 });
