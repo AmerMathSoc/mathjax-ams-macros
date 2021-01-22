@@ -103,18 +103,10 @@ new SymbolMap_js_1.DelimiterMap('ams-macros-delimiters', ParseMethods_js_1.defau
     '\\lAngle': '\u27EA',
     '\\rAngle': '\u27EB',
 });
-new SymbolMap_js_1.EnvironmentMap('ams-macros-environments', ParseMethods_js_1.default.environment, {
-    dcases: ['Array', null, '\\{', '.', 'll', null, '.2em', 'D'],
-    bsmallmatrix: ['Array', null, '[', ']', 'c', '0.333em', '.2em', 'S', 1],
-    multlined: ['Array', null, '[', ']', 'c', '0.333em', '.2em', 'S', 1],
-}, {
-    Array: BaseMethods_js_1.default.Array,
-});
 exports.configuration = Configuration_js_1.Configuration.create('ams-macros', {
     handler: {
         delimiter: ['ams-macros-delimiters'],
         macro: ['ams-macros-macros', 'ams-macros-delimiters'],
-        environment: ['ams-macros-environments'],
     },
 });
 //# sourceMappingURL=ams-macros.js.map
