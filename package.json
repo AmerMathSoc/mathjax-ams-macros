@@ -21,13 +21,13 @@
     "url": "https://github.com/AmerMathSoc/mathjax-ams-macros/issues"
   },
   "devDependencies": {
-    "mathjax-full": "github:mathjax/MathJax-src#stix2",
-    "standard-version": "^9.0.0",
-    "typescript": "^3.9.7"
+    "mathjax-full": "github:amermathsoc/MathJax-src#97fcc3e3350d1dde2dd01b83ba40a34fc6138a57",
+    "standard-version": "^9.3.0",
+    "typescript": "^4.2.4"
   },
   "scripts": {
     "release": "standard-version",
-    "test": "node test/base.js > test/test.html",
-    "postinstall": "cd node_modules/mathjax-full && npm i && npm run compile"
+    "pretest": "npx tsc",
+    "test": "node test/base.js > test/test.html"
   }
 }
