@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.3.0](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v3.2.0...v3.3.0) (2021-05-25)
+
+
+### Features
+
+* add  \Sha, \Shcha, and \De ([fb50c21](https://github.com/AmerMathSoc/mathjax-ams-macros/commit/fb50c21ec1dc26c56a43e9831405456c245306a5)), closes [#40](https://github.com/AmerMathSoc/mathjax-ams-macros/issues/40)
+
+
+### Bug Fixes
+
+* remove mathtools macros ([fdb3f8f](https://github.com/AmerMathSoc/mathjax-ams-macros/commit/fdb3f8ff5e5c391cbf00ae867f425df95fce2b30)), closes [#36](https://github.com/AmerMathSoc/mathjax-ams-macros/issues/36)
+* update dependencies and scripts ([3df494b](https://github.com/AmerMathSoc/mathjax-ams-macros/commit/3df494b60fdd703048a3556e073ab4601cc03683))
+
 ## [3.2.0](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v3.1.0...v3.2.0) (2021-01-14)
 
 
