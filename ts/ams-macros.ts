@@ -1,5 +1,5 @@
-/*************************************************************
- *  Copyright (c) 2020 Peter Krautzberger
+/*!
+ *  Copyright (c) 2020 American Mathematical Society
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -110,6 +110,10 @@ new CommandMap(
         mathbfcal: ['Macro', '\\boldsymbol{\\mathcal{#1}}', 1],
         // mcom 3507
         sfrac: 'bevelledFraction', // NOTE does not support optional arguments from xfrac package
+        // some Cyrrillic
+        Sha: ['Macro','\\mathrm{\u0428}'],
+        Shcha: ['Macro','\\mathrm{\u0429}'],
+        De: ['Macro','\\mathrm{\u0434}'],
     },
     AmsMacrosMethods
 );

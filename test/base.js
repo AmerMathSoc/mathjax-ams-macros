@@ -17,14 +17,15 @@ const theBigString =
   '$$ \\widecheck{xyz}$$' +
   '$$ \\accentset{x}{u}$$' +
   '$$ \\intbar_x^\\infty$$' +
-  '$$ \\bfit{bolditalic}$$' +
+  '$$ \\bfit{Bold Italic}$$' +
   '$$ \\mathsc{Small Caps}$$' +
-  '$$ \\mathbfcal{bold caligraphic}$$' +
+  '$$ \\mathbfcal{Bold Caligraphic}$$' +
   '$$ \\sfrac{n}{k}$$' +
   '$$ \\left \\Vvert\\frac{n}{k} \\right \\Vvert$$' +
   '$$ \\left \\llbracket\\frac{n}{k} \\right \\rrbracket$$' +
   '$$ \\left \\llangle\\frac{n}{k} \\right \\rrangle$$' +
   '$$ \\left \\lAngle\\frac{n}{k} \\right \\rAngle$$' +
+  '$$ \\Sha, \\Shcha, De$$' +
   '';
 
 console.log(mj(theBigString, true));
