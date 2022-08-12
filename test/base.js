@@ -26,6 +26,7 @@ const theBigString =
   '$$ \\left \\llangle\\frac{n}{k} \\right \\rrangle$$' +
   '$$ \\left \\lAngle\\frac{n}{k} \\right \\rAngle$$' +
   '$$ \\Sha, \\Shcha, De$$' +
+  '$$ \\txt{hello \\\\world}$$' +
   '';
 
 console.log(mj(theBigString, true));

@@ -13,6 +13,7 @@ const {
 const {
   BoldsymbolConfiguration,
 } = require('mathjax-full/js/input/tex/boldsymbol/BoldsymbolConfiguration.js');
+const { TextMacrosConfiguration } = require ('mathjax-full/js/input/tex/textmacros/TextMacrosConfiguration.js');
 
 const amsMacros = require('../js/ams-macros.js').configuration;
 
@@ -25,6 +26,7 @@ const tex = new TeX({
     AmsConfiguration.name,
     BoldsymbolConfiguration.name,
     amsMacros.name,
+    TextMacrosConfiguration.name,
   ],
 });
 const { STIX2Font } = require('mathjax-full/js/output/svg/fonts/stix2.js');
