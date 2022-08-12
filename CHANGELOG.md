@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.4.0](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v3.3.0...v3.4.0) (2022-08-12)
+
+
+### Features
+
+* add txt (mapping to text) ([0038f2e](https://github.com/AmerMathSoc/mathjax-ams-macros/commit/0038f2e80eb367886541e9f013b1049ad9bcbc95)), closes [#41](https://github.com/AmerMathSoc/mathjax-ams-macros/issues/41)
+
+
+### Bug Fixes
+
+* accentset with complex content ([ec1b5b8](https://github.com/AmerMathSoc/mathjax-ams-macros/commit/ec1b5b865d3c5ac634d32f99de2d0d1f2631e861)), closes [#41](https://github.com/AmerMathSoc/mathjax-ams-macros/issues/41)
+
 ## [3.3.0](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v3.2.0...v3.3.0) (2021-05-25)
 
 
