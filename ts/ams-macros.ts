@@ -28,7 +28,7 @@ let AmsMacrosMethods: Record<string, ParseMethod> = {};
 AmsMacrosMethods.accentset = function (parser: TexParser, name: string) {
     const accent = parser.ParseArg(name);
     const expression = parser.ParseArg(name);
-    NodeUtil.setAttribute(accent, 'accent', true);
+    if (accent.isKind('mo')) NodeUtil.setAttribute(accent, 'accent', true);
     NodeUtil.setAttribute(accent, 'mathsize', 'small');
     if (parser.stack.env.font) {
         NodeUtil.setAttribute(accent, 'mathvariant', parser.stack.env.font);
