@@ -37,7 +37,8 @@ var AmsMacrosMethods = {};
 AmsMacrosMethods.accentset = function (parser, name) {
     var accent = parser.ParseArg(name);
     var expression = parser.ParseArg(name);
-    NodeUtil_js_1.default.setAttribute(accent, 'accent', true);
+    if (accent.isKind('mo'))
+        NodeUtil_js_1.default.setAttribute(accent, 'accent', true);
     NodeUtil_js_1.default.setAttribute(accent, 'mathsize', 'small');
     if (parser.stack.env.font) {
         NodeUtil_js_1.default.setAttribute(accent, 'mathvariant', parser.stack.env.font);
@@ -111,6 +112,7 @@ new SymbolMap_js_1.CommandMap('ams-macros-macros', {
     Sha: ['Macro', '\\mathrm{\u0428}'],
     Shcha: ['Macro', '\\mathrm{\u0429}'],
     De: ['Macro', '\\mathrm{\u0434}'],
+    txt: ['Macro', '\\text{#1}', 1],
 }, AmsMacrosMethods);
 new SymbolMap_js_1.DelimiterMap('ams-macros-delimiters', ParseMethods_js_1.default.delimiter, {
     '\\Vvert': '\u2980',
