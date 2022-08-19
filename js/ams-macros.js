@@ -112,7 +112,7 @@ new SymbolMap_js_1.CommandMap('ams-macros-macros', {
     Sha: ['Macro', '\\mathrm{\u0428}'],
     Shcha: ['Macro', '\\mathrm{\u0429}'],
     De: ['Macro', '\\mathrm{\u0434}'],
-    txt: ['Macro', '\\text{#1}', 1],
+    txt: ['Macro', '\\vcenter{\\makebox{#1}}', 1],
 }, AmsMacrosMethods);
 new SymbolMap_js_1.DelimiterMap('ams-macros-delimiters', ParseMethods_js_1.default.delimiter, {
     '\\Vvert': '\u2980',

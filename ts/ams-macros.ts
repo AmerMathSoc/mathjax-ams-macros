@@ -114,7 +114,7 @@ new CommandMap(
         Sha: ['Macro','\\mathrm{\u0428}'],
         Shcha: ['Macro','\\mathrm{\u0429}'],
         De: ['Macro','\\mathrm{\u0434}'],
-        txt: ['Macro', '\\text{#1}', 1],
+        txt: ['Macro', '\\vcenter{\\makebox{#1}}', 1],
     },
     AmsMacrosMethods
 );
