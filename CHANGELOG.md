@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.4.1](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v3.4.0...v3.4.1) (2022-08-19)
+
+
+### Bug Fixes
+
+* rewrite txt macro ([ee527b1](https://github.com/AmerMathSoc/mathjax-ams-macros/commit/ee527b156677e4d931df66bd45958996df719c15)), closes [#43](https://github.com/AmerMathSoc/mathjax-ams-macros/issues/43)
+
 ## [3.4.0](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v3.3.0...v3.4.0) (2022-08-12)
 
 
