@@ -74,63 +74,63 @@ new CommandMap(
             'Macro',
             '\\mathchoice{\\mkern18mu}{\\mkern12mu}{\\mkern12mu}{\\mkern12mu}(\\operatorname{mod}\\mkern6mu #1)',
             1,
-        ],
+        ], // TODO switch to mathjax version?
         // btran 8
-        bigsqcap: ['Macro', '\\mmlToken{mo}{\u2a05}'],
+        bigsqcap: ['Macro', '\\mmlToken{mo}{\u2a05}'], // unicode-math
         // mcom 3381
-        lefteqn: ['Macro', '\\rlap{\\displaystyle{#1}}', 1],
+        lefteqn: ['Macro', '\\rlap{\\displaystyle{#1}}', 1], // TODO
         // jams887
-        sslash: ['Macro', '\u2AFD'],
+        sslash: ['Macro', '\u2AFD'], // unicode-math
         // Cf. #136
-        square: ['Macro', '◻'],
+        square: ['Macro', '◻'], // TODO switch to mathjax version? (we have u25FB, they have u25A1)
         // Cf. #136
-        Box: ['Macro', '◻'],
+        Box: ['Macro', '◻'], // TODO switch to mathjax version? (same u25FB)
         // jams889
-        mathds: ['Macro', '\\mathbb{#1}', 1],
+        mathds: ['Macro', '\\mathbb{#1}', 1], // TODO suggest alias for mathjax? (dsfont package)
         // jams898
-        blacktriangle: ['Macro', '▴'],
+        blacktriangle: ['Macro', '▴'], // unicode-math
         // mcom 1463
-        coloneq: ['Macro', '\\mathrel{≔}'],
+        coloneq: ['Macro', '\\mathrel{≔}'], // unicode-math
         // mcl08
-        adots: ['Macro', '⋰'],
+        adots: ['Macro', '⋰'], // unicode-math
         // mcl 01
-        overarc: ['Accent', '2312', 1],
+        overarc: ['Accent', '2312', 1], // TODO
         // jams906
-        widecheck: ['Accent', '02C7', 1],
+        widecheck: ['Accent', '02C7', 1], // unicode-math
         // mcom3329, from accents package
-        accentset: 'accentset',
+        accentset: 'accentset', // TODO
         // jams 913 NOTE stix.sty
-        intbar: ['Macro', '\\mmlToken{mo}{\u2a0d}'],
+        intbar: ['Macro', '\\mmlToken{mo}{\u2a0d}'],  // unicode-math
         // mcom 3375
-        bfit: ['SetFont', TexConstant.Variant.BOLDITALIC],
-        mathbfit: ['Macro', '{\\bfit #1}', 1],
+        bfit: ['SetFont', TexConstant.Variant.BOLDITALIC], // TODO suggest for mathjax?
+        mathbfit: ['Macro', '{\\bfit #1}', 1], // TODO ditto
         // mcom 3374
-        mathsc: 'smallcaps',
+        mathsc: 'smallcaps', // TODO suggest for mathjax?
         // mcom 3365
-        mathbfcal: ['Macro', '\\boldsymbol{\\mathcal{#1}}', 1],
+        mathbfcal: ['Macro', '\\boldsymbol{\\mathcal{#1}}', 1], // TODO suggest for mathjax?
         // mcom 3507
-        sfrac: 'bevelledFraction', // NOTE does not support optional arguments from xfrac package
+        sfrac: 'bevelledFraction', // NOTE does not support optional arguments from xfrac package // TODO
         // some Cyrrillic
-        Sha: ['Macro','\\mathrm{\u0428}'],
-        Shcha: ['Macro','\\mathrm{\u0429}'],
-        De: ['Macro','\\mathrm{\u0434}'],
-        txt: ['Macro', '\\vcenter{\\makebox{#1}}', 1],
+        Sha: ['Macro','\\mathrm{\u0428}'], // TODO
+        Shcha: ['Macro','\\mathrm{\u0429}'], // TODO
+        De: ['Macro','\\mathrm{\u0434}'], // TODO
+        txt: ['Macro', '\\vcenter{\\makebox{#1}}', 1], // TODO
     },
     AmsMacrosMethods
 );
 
 new DelimiterMap('ams-macros-delimiters', ParseMethods.delimiter, {
     // mcom1149
-    '\\Vvert': '\u2980',
+    '\\Vvert': '\u2980', // unicode-math
     // mcom 3545 (originally macro for btran18)
-    '\\llbracket': '\u27E6',
-    '\\rrbracket': '\u27E7',
+    '\\llbracket': '\u27E6', // stmaryrd (no longer present)
+    '\\rrbracket': '\u27E7', // stmaryrd (no longer present)
     // mcom 3567
-    '\\llangle': '\u2989',
-    '\\rrangle': '\u298A',
+    '\\llangle': '\u2989', // unicode-math
+    '\\rrangle': '\u298A', // unicode-math
     // btran 54
-    '\\lAngle': '\u27EA',
-    '\\rAngle': '\u27EB',
+    '\\lAngle': '\u27EA', // unicode-math
+    '\\rAngle': '\u27EB', // unicode-math
 });
 
 export const configuration = Configuration.create('ams-macros', {
