@@ -1,4 +1,5 @@
-const mj = require('./mj');
+import * as fs from 'node:fs';
+import {mj} from './mj.js';
 
 const theBigString =
   '' +
@@ -26,7 +27,7 @@ const theBigString =
   '$$ \\left \\llangle\\frac{n}{k} \\right \\rrangle$$' +
   '$$ \\left \\lAngle\\frac{n}{k} \\right \\rAngle$$' +
   '$$ \\Sha, \\Shcha, De$$' +
-  '$$ \\txt{hello \\\\world}$$' +
+  '$$ \\txt{hello \\\\world}$$' + // TODO mathjax/MathJax#3082
   '';
 
-console.log(mj(theBigString, true));
+fs.writeFileSync('./test/test.html', await mj(theBigString));

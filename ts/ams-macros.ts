@@ -21,7 +21,7 @@ import { ParseMethod } from 'mathjax-full/js/input/tex/Types.js';
 import { TexConstant } from 'mathjax-full/js/input/tex/TexConstants.js';
 import ParseMethods from 'mathjax-full/js/input/tex/ParseMethods.js';
 import BaseMethods from 'mathjax-full/js/input/tex/base/BaseMethods.js';
-import TexParser from 'mathjax-full/js/input/tex/TexParser';
+import TexParser from 'mathjax-full/js/input/tex/TexParser.js';
 
 let AmsMacrosMethods: Record<string, ParseMethod> = {};
 

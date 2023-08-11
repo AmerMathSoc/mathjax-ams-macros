@@ -1,6 +1,7 @@
 {
   "name": "mathjax-ams-macros",
   "main": "./js/ams-macros.js",
+  "type": "module",
   "version": "3.4.1",
   "description": "A mathjax extension for AMS production",
   "keywords": [
@@ -21,13 +22,14 @@
     "url": "https://github.com/AmerMathSoc/mathjax-ams-macros/issues"
   },
   "devDependencies": {
-    "mathjax-full": "github:amermathsoc/MathJax-src#f4201bf7ff0f3a42137417f57baba55e80755053",
-    "standard-version": "^9.3.0",
-    "typescript": "^4.2.4"
+    "mathjax-full": "4.0.0-beta.3",
+    "mathjax-stix2-font": "4.0.0-beta.3",
+    "standard-version": "9.5.0",
+    "typescript": "5.1.6"
   },
   "scripts": {
     "release": "standard-version",
     "pretest": "npx tsc",
-    "test": "node test/base.js > test/test.html"
+    "test": "node test/base.js"
   }
 }
