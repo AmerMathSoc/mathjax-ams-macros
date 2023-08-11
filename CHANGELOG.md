@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v3.4.1...v4.0.0) (2023-08-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* Switches from CJS to ESM
+
+### Features
+
+* upgrade to MathJax v4 ([92f1c40](https://github.com/AmerMathSoc/mathjax-ams-macros/commit/92f1c40ba9e88f184c85b063fb5765a3b3351285)), closes [#45](https://github.com/AmerMathSoc/mathjax-ams-macros/issues/45) [#44](https://github.com/AmerMathSoc/mathjax-ams-macros/issues/44)
+
 ### [3.4.1](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v3.4.0...v3.4.1) (2022-08-19)
 
 
