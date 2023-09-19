@@ -22,7 +22,7 @@
     "url": "https://github.com/AmerMathSoc/mathjax-ams-macros/issues"
   },
   "devDependencies": {
-    "mathjax-full": "4.0.0-beta.3",
+    "mathjax-full": "github:amermathsoc/MathJax-src#d0b80ec6f470a6abcd20ce0c85a27e3fb4f9b717",
     "mathjax-stix2-font": "4.0.0-beta.3",
     "standard-version": "9.5.0",
     "typescript": "5.1.6"

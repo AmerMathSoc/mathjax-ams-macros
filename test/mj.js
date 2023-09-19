@@ -15,7 +15,7 @@ import {
 import {
   BoldsymbolConfiguration,
 } from 'mathjax-full/js/input/tex/boldsymbol/BoldsymbolConfiguration.js';
-// const { TextMacrosConfiguration } = require ('mathjax-full/js/input/tex/textmacros/TextMacrosConfiguration.js');
+import { TextMacrosConfiguration } from 'mathjax-full/js/input/tex/textmacros/TextMacrosConfiguration.js';
 
 import { configuration as amsMacros } from '../js/ams-macros.js';
 
@@ -28,7 +28,7 @@ const tex = new TeX({
     AmsConfiguration.name,
     BoldsymbolConfiguration.name,
     amsMacros.name,
-    // TextMacrosConfiguration.name, TODO mathjax/MathJax#3082
+    TextMacrosConfiguration.name,
   ],
 });
 
