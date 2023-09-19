@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v4.0.0...v4.1.0) (2023-09-19)
+
+
+### Features
+
+* add browser build ([e1fd965](https://github.com/AmerMathSoc/mathjax-ams-macros/commit/e1fd965479e0406960523427b8df5a5cb410690f)), closes [#45](https://github.com/AmerMathSoc/mathjax-ams-macros/issues/45)
+
 ## [4.0.0](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v3.4.1...v4.0.0) (2023-08-11)
 
 

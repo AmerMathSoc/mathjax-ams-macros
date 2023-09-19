@@ -2,7 +2,7 @@
   "name": "mathjax-ams-macros",
   "main": "./js/ams-macros.js",
   "type": "module",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "A mathjax extension for AMS production",
   "keywords": [
     "MathJax",
