@@ -1,0 +1,18 @@
+{
+  "build": {
+    "id": "[ams]/ams-macros",
+    "component": "input/tex/extension/ams-macros",
+    "js": "../js",
+    "ts": "../ts",
+    "targets": ["ams-macros.ts"]
+  },
+  "webpack": {
+    "name": "ams-macros",
+    "js": "../js",
+    "libs": [
+      "components/src/input/tex-base/lib",
+      "components/src/core/lib"
+    ],
+    "dist": "../browser/"
+  }
+}
