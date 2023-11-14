@@ -22,8 +22,8 @@
     "url": "https://github.com/AmerMathSoc/mathjax-ams-macros/issues"
   },
   "devDependencies": {
-    "mathjax-full": "4.0.0-beta.3",
-    "mathjax-stix2-font": "4.0.0-beta.3",
+    "mathjax-full": "4.0.0-beta.4",
+    "mathjax-stix2-font": "4.0.0-beta.4",
     "standard-version": "9.5.0",
     "terser-webpack-plugin": "5.3.9",
     "typescript": "5.1.6",

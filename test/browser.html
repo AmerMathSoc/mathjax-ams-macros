@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Test of mathjax-ams-macros</title>
+   <script>
+      MathJax = {
+         loader: {
+            load: ['[test]/ams-macros.js'],
+            paths: { test: '../browser' }
+         },
+         tex: {
+            packages: { '[+]': ['ams-macros'] }
+         }
+      };
+   </script>
+   <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0-beta.4/tex-chtml.js">
+      </script>
+
+
+</head>
+
+<body>
+   <h1>mathjax-ams-macros test</h1>
+
+   \( a \pmod b\)
+   $$ a \pmod b$$
+   $$ \bigsqcap$$
+   $$\begin{eqnarray}   \lefteqn{f(a,b,c,d,e,...)} \\  &amp; = &amp; lefteqn \end{eqnarray}$$
+   $$ \sslash$$
+   $$ \square$$
+   $$ \Box$$
+   $$ \mathds{x}$$
+   $$ \blacktriangle$$
+   $$ \coloneq$$
+   $$ \adots$$
+   $$ \overarc{xyzzyx}$$
+   $$ \widecheck{xyz}$$
+   $$ \accentset{x}{u}$$
+   $$ \intbar_x^\infty$$
+   $$ \bfit{Bold Italic}$$
+   $$ \mathsc{Small Caps}$$
+   $$ \mathbfcal{Bold Caligraphic}$$
+   $$ \sfrac{n}{k}$$
+   $$ \left \Vvert\frac{n}{k} \right \Vvert$$
+   $$ \left \llbracket\frac{n}{k} \right \rrbracket$$
+   $$ \left \llangle\frac{n}{k} \right \rrangle$$
+   $$ \left \lAngle\frac{n}{k} \right \rAngle$$
+   $$ \Sha, \Shcha, De$$
+   $$ \txt{hello \\ world}$$
+</body>
+
+</html>

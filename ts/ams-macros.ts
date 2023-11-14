@@ -16,7 +16,7 @@
 
 import NodeUtil from 'mathjax-full/js/input/tex/NodeUtil.js';
 import { Configuration } from 'mathjax-full/js/input/tex/Configuration.js';
-import { CommandMap, DelimiterMap } from 'mathjax-full/js/input/tex/SymbolMap.js';
+import { CommandMap, DelimiterMap } from 'mathjax-full/js/input/tex/TokenMap.js';
 import { ParseMethod } from 'mathjax-full/js/input/tex/Types.js';
 import { TexConstant } from 'mathjax-full/js/input/tex/TexConstants.js';
 import ParseMethods from 'mathjax-full/js/input/tex/ParseMethods.js';
