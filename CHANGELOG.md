@@ -1,6 +1,22 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [5.0.0](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v4.1.1...v5.0.0) (2025-07-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* switches from mathjax-full to @mathjax/src package.
+
+### Features
+
+* upgrade and adjust to mathjax v4.0.0-rc.4 ([ea9a72f](https://github.com/AmerMathSoc/mathjax-ams-macros/commit/ea9a72ffb6bac30cf28de7f2d670d6a6e151ae96)), closes [#48](https://github.com/AmerMathSoc/mathjax-ams-macros/issues/48)
+
+
+### Bug Fixes
+
+* **package:** switch to commit-and-tag-version ([ff8e675](https://github.com/AmerMathSoc/mathjax-ams-macros/commit/ff8e6754fd5493c8d9150e1382fe0ee30bc835ea))
 
 ### [4.1.1](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v4.1.0...v4.1.1) (2023-11-14)
 
