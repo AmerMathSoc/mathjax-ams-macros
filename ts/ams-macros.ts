@@ -14,14 +14,14 @@
  *  limitations under the License.
  */
 
-import NodeUtil from 'mathjax-full/js/input/tex/NodeUtil.js';
-import { Configuration } from 'mathjax-full/js/input/tex/Configuration.js';
-import { CommandMap, DelimiterMap } from 'mathjax-full/js/input/tex/TokenMap.js';
-import { ParseMethod } from 'mathjax-full/js/input/tex/Types.js';
-import { TexConstant } from 'mathjax-full/js/input/tex/TexConstants.js';
-import ParseMethods from 'mathjax-full/js/input/tex/ParseMethods.js';
-import BaseMethods from 'mathjax-full/js/input/tex/base/BaseMethods.js';
-import TexParser from 'mathjax-full/js/input/tex/TexParser.js';
+import NodeUtil from '@mathjax/src/js/input/tex/NodeUtil.js';
+import { Configuration } from '@mathjax/src/js/input/tex/Configuration.js';
+import { CommandMap, DelimiterMap } from '@mathjax/src/js/input/tex/TokenMap.js';
+import { ParseMethod } from '@mathjax/src/js/input/tex/Types.js';
+import { TexConstant } from '@mathjax/src/js/input/tex/TexConstants.js';
+import ParseMethods from '@mathjax/src/js/input/tex/ParseMethods.js';
+import BaseMethods from '@mathjax/src/js/input/tex/base/BaseMethods.js';
+import TexParser from '@mathjax/src/js/input/tex/TexParser.js';
 
 let AmsMacrosMethods: Record<string, ParseMethod> = {};
 
