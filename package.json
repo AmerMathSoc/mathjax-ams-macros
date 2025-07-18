@@ -1,5 +1,5 @@
 {
-  "name": "mathjax-ams-macros",
+  "name": "@amermathsoc/mathjax-ams-macros",
   "main": "./js/ams-macros.js",
   "type": "module",
   "version": "5.0.0",
