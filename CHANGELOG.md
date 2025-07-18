@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.1.0](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v5.0.0...v5.1.0) (2025-07-18)
+
+
+### Features
+
+* feat: prepare to make public ([057b83a](https://github.com/AmerMathSoc/mathjax-ams-macros/commit/057b83a2cbd74f3bd9806d52e3d4d8c05d0f920f)), closes [#46](https://github.com/AmerMathSoc/mathjax-ams-macros/issues/46)
+
 ## [5.0.0](https://github.com/AmerMathSoc/mathjax-ams-macros/compare/v4.1.1...v5.0.0) (2025-07-09)
 
 
